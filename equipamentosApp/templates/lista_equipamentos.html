@@ -1,0 +1,36 @@
+<!-- myapp/templates/view_inscriptions.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"> <!-- Define a codificação de caracteres
+para o documento -->
+<meta name="viewport" content="width=device-width,
+initial-scale=1.0"> <!-- Configura a viewport para dispositivos
+móveis -->
+<title>Inscrições</title> <!-- Define o título da página -->
+</head>
+<body>
+<h1>Lista de Inscrições</h1> <!-- Cabeçalho da página -->
+<table>
+
+<thead>
+<tr>
+<th>id</th>
+<th>local</th>
+</tr>
+</thead>
+<tbody>
+{% for equipamento in equipamentos %} <!-- Itera sobre a
+
+lista de inscrições -->
+<tr>
+<td>{{ equipamento.id }}</td>
+<td>{{ equipamento.local }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+<a href="{% url 'home' %}"><button>Home</button></a> <!-- Botão
+para voltar à página inicial -->
+</body>
+</html>

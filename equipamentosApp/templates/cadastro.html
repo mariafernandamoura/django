@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"> <!-- Define a codificação de caracteres
+para o documento -->
+<meta name="viewport" content="width=device-width,
+initial-scale=1.0"> <!-- Configura a viewport para dispositivos
+móveis -->
+<title>Inscrição</title> <!-- Define o título da página -->
+</head>
+<body>
+<h1>Formulário de Inscrição</h1> <!-- Cabeçalho da página -->
+<form method="post"> <!-- Formulário que envia os dados via POST
+-->
+
+{% csrf_token %} <!-- Token de segurança CSRF -->
+<label for="id">id:</label>
+<input type="text" id="id" name="id" required><br><br>
+
+<!-- Campo para o nome -->
+
+<label for="local">local:</label>
+<input type="text" id="local" name="local" required><br><br>
+
+<!-- Campo para o email -->
+
+
+<button type="submit">Enviar</button> <!-- Botão para enviar
+
+o formulário -->
+</form>
+</body>
+</html>
