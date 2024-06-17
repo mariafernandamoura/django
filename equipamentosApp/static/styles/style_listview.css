@@ -29,6 +29,10 @@ body{
     height: 100vh;
 }
 
+a{
+    text-decoration: none;
+}
+
 #left-section>main>img{
     width: 70%;
 }
@@ -43,6 +47,7 @@ body{
     font-family: "Noto Sans JP", sans-serif;
     color: var(--primary-beige);
     font-weight: 500;
+    text-decoration: none;
 }
 
 #left-section>main{
@@ -108,6 +113,7 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow:auto;
 }
 
 #item-list-tile{

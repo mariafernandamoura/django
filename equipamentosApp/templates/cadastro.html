@@ -1,33 +1,38 @@
+{% load static %} 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"> <!-- Define a codificação de caracteres
-para o documento -->
-<meta name="viewport" content="width=device-width,
-initial-scale=1.0"> <!-- Configura a viewport para dispositivos
-móveis -->
-<title>Inscrição</title> <!-- Define o título da página -->
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/style_formpage.css' %}"> 
+    <title>Cadastro</title> 
 </head>
 <body>
-<h1>Formulário de Inscrição</h1> <!-- Cabeçalho da página -->
-<form method="post"> <!-- Formulário que envia os dados via POST
--->
+    <header>
+        <p>CONFECÇÕES S.A</p>
+        <p>limeira - sp</p>
+    </header>
 
-{% csrf_token %} <!-- Token de segurança CSRF -->
-<label for="id">id:</label>
-<input type="text" id="id" name="id" required><br><br>
+    <section>
+        <h1>Cadasto de Equipamentos</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="inputs">
+                <label for="id">id:</label>
+                <input type="text" id="id" name="id" required>
+            </div>
+            <div class="inputs">
+                <label for="local">local:</label>
+                <input type="text" id="local" name="local" required>
+            </div>
+            <div class="inputs">
+                <label for="image">imagem: </label>
+                <input type="file" id="imagem" name="imagem" required>
+            </div>
+            <button type="submit">cadastrar</button>
+        </form>
+    </section>
 
-<!-- Campo para o nome -->
-
-<label for="local">local:</label>
-<input type="text" id="local" name="local" required><br><br>
-
-<!-- Campo para o email -->
-
-
-<button type="submit">Enviar</button> <!-- Botão para enviar
-
-o formulário -->
-</form>
 </body>
 </html>

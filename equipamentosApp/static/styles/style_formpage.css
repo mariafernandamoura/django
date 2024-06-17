@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Tenor+Sans&display=swap');
+
+:root{
+    --primary-beige: #EFE5D9;
+    --primary-black: #263238;
+    --secondary-green: #BDDD8E;
+}   
+
+*{
+    margin: 0;
+    font-family: "Tenor Sans", sans-serif;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--primary-beige);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/*LEFT SECTION*/
+
+header{
+    background-color: var(--secondary-green);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 10%;
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+header>p{
+    margin-left: 1.5%;
+    margin-right: 2%;
+
+    font-family: "Noto Sans JP", sans-serif;
+    color: var(--primary-black);
+    font-weight: 500;
+}
+
+
+h1{
+    color: var(--secondary-green);
+    font-size: 2em;
+    letter-spacing: 0.1em;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 2%;
+    width: 30%;
+    height: 60%;
+    border-radius: 30px;
+    background-color: var(--primary-black);
+}
+
+form{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+        width: 100%;
+}
+
+input{
+    border-radius: 5px;
+    box-shadow: none;
+    outline: 0;
+    font-family: "Noto Sans JP", sans-serif;
+    color: var(--primary-black);
+    font-size: 1em;
+    font-weight: 500;
+    padding: 3%;
+    border: 0 none;
+    height: 15%;
+    width: 90%;
+}
+
+input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+label{
+    margin-left: 2%;
+    font-size: 1.2em;
+    color: var(--primary-beige);
+}
+
+input[type=button]{
+   background-color: #BDDD8E;
+}
